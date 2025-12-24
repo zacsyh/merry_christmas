@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣诞彩蛋 🎁</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 仅新增图片容器样式，不改动原有CSS */
+        .egg-img {
+            width: 100%;
+            max-width: 300px; /* 图片最大宽度 */
+            height: auto; /* 保持宽高比 */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 保留雪花容器，雪花效果不变 -->
+    <div id="snow-container"></div>
+
+    <!--主要内容卡片 - 替换圣诞树为图片 -->
+    <div class="card">
+        <!-- 替换圣诞树为自定义图片 -->
+        <img src="photo.jpg" 
+             alt="彩蛋图片" class="egg-img">
+        <!-- 返回按钮 -->
+        <p style="margin-top: 30px; color: #ffd700; cursor: pointer; text-decoration: underline;" onclick="window.location.href='index.html'">🔙 返回</p>
+    </div>
+
+    <!-- 保留雪花脚本，背景雪花效果不变 -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    /* 圣诞红绿渐变背景 */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mountains of Christmas', cursive; /* 使用节日字体 */
+    overflow: hidden; /* 防止出现滚动条 */
+    color: #fff;
+}
+
+/* 中间卡片样式 */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 10; /* 保证卡片在雪花上面 */
+    max-width: 90%;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 圣诞树图标 */
+.tree {
+    font-size: 80px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d; /* 红色标题 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+p {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+.signature {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* 卡片轻微浮动动画 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 雪花的基本样式 */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(105vh); }
+}
